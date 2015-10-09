@@ -21,7 +21,7 @@ $(function(){
     if(!$(this).hasClass("active")) {
       var scrollTo = $(this).data("scrollto"),
       scrollTarget = $('*[data-scrollto="'+scrollTo+'"].js-scroll-target');
-      $.scrollTo(scrollTarget, 350);
+      $.scrollTo(scrollTarget, 500);
     }
   });
   $(".header__ham").click(function(){
