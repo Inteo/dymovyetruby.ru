@@ -19,10 +19,38 @@
     <link rel="stylesheet" href="f/fancybox/jquery.fancybox.css?v=2.1.5" media="screen">
     <script src="f/fancybox/jquery.fancybox.pack.js?v=2.1.5"></script>
     <link rel="stylesheet" href="f/css/main.css">
+    <script src="//api-maps.yandex.ru/2.1/?lang=ru_RU" type="text/javascript"></script>
     <script src="f/js/common.js"></script>
     <script>
       $(document).ready(function(){
-        
+        $('.facts__slider-holder').carouFredSel({
+          responsive: true,
+          pagination: '.facts__pager',
+          width: "100%",
+          scroll: {
+            duration: 450,
+            timeoutDuration: 9000,
+            fx: 'crossfade',
+          }
+        });
+      });
+      ymaps.ready(function () {
+        var myMap = new ymaps.Map('map', {
+            center: [55.829456, 37.511418],
+            zoom: 16,
+            controls: [],
+          }),
+          myPlacemark = new ymaps.Placemark(myMap.getCenter(), {
+            hintContent: 'Собственный значок метки',
+            balloonContent: 'Это красивая метка'
+          },
+          {
+            iconLayout: 'default#image',
+            iconImageHref: 'f/i/marker.png',
+            iconImageSize: [20, 34],
+            iconImageOffset: [-10, -34]
+          });
+        myMap.geoObjects.add(myPlacemark);
       });
     </script>
   </head>
@@ -31,9 +59,9 @@
     <header class="header js-scroll-target" data-scrollto="1">
       <a href="#" class="header__ham iconize-ham">&nbsp;</a>
       <div class="holder">
-        <h1 class="logo">
+        <div class="logo">
           <a href="/"><span><span>Дымовые</span> трубы России</span></a>
-        </h1>
+        </div>
         <div class="header__mail"><a href="mailto:info@dymovyetruby.ru"><i class="icon-mail"></i>info@dymovyetruby.ru</a></div>
       </div>
       <div class="header__phone">
@@ -44,9 +72,9 @@
     <div class="content">
       <div class="preface">
         <div class="holder">
-          <p class="preface__text">
+          <h1 class="preface__text">
             <span>Промышленные дымовые трубы <br>для котельных</span> <a href="#">от производителя</a>
-          </p>
+          </h1>
         </div>
         <img src="f/i/preface-back.jpg" alt="">
       </div>
@@ -140,7 +168,7 @@
       </section>
       <section class="subsection projects">
         <div class="holder">
-          <p class="projects__title">Выполненые проекты</p>
+          <p class="projects__title subsection__title">Выполненые проекты</p>
           <p class="projects__subtitle">Нас уже знают в 30 городах России</p>
           <div class="projects__holder">
             <div class="projects__item">
@@ -210,6 +238,168 @@
           </div>
         </div>
       </section>
+      <section class="subsection trust">
+        <div class="holder">
+          <div class="trust__title"><p>Нам доверяют</p></div>
+          <div class="trust__wrap">
+            <div class="trust__holder">
+              <div class="trust__item"><img src="f/i/trust/1.jpg">
+              </div><div class="trust__item"><img src="f/i/trust/2.jpg">
+              </div><div class="trust__item"><img src="f/i/trust/3.jpg">
+              </div><div class="trust__item"><img src="f/i/trust/4.jpg">
+              </div><div class="trust__item"><img src="f/i/trust/5.jpg"></div>
+            </div>
+          </div>
+        </div>
+      </section>
+      <section class="subsection consult-form">
+        <div class="holder">
+          <div class="consult-form__holder">
+            <p class="subsection__title">Закажите бесплатный обратный звонок <br>для консультации со специалистом!</p>
+            <div class="input-wrap">
+              <label for="input-name" class="input-hint">
+                Фамилия и Имя<span>*</span>
+              </label>
+              <input type="text" id="input-name" class="input" value="">
+            </div>
+            <div class="input-wrap">
+              <label for="input-tel" class="input-hint">
+                Телефон<span>*</span>
+              </label>
+              <input type="tel" id="input-tel" class="input" value="">
+            </div>
+            <input type="email" class="input" placeholder="E-mail">
+            <textarea class="input" placeholder="Введите Ваше сообщение"></textarea>
+            <div class="consult-form__btn"><a href="#" class="btn">Получить консультацию</a></div>
+          </div>
+        </div>
+      </section>
+      <section class="subsection services">
+        <div class="holder">
+          <p class="subsection__title">Услуги</p>
+          <div class="services__holder">
+            <div class="services__item">
+              <div class="services__side services__info">
+                <p class="services__name">Проектирование</p>
+                <p class="services__text">Проектирование дымовой трубы всегда осуществляется индивидуально: для конкретного объекта, с установленными параметрами и условиями эксплуатации. Для долгосрочной и безопасной эксплуатации дымовой трубы необходимо запроектировать её в соответствии со всеми действующим нормам и правилам, потребностями Заказчика, ветровыми нагрузками, а также сейсмичностью района расположения объекта.</p>
+                <a href="#service-popup" class="services__link modal-inline">Подробнее</a>
+              </div><div class="services__side services__img">
+                <img src="f/i/services/1.jpg" alt="">
+              </div>
+            </div>
+            <div class="services__item">
+              <div class="services__side services__img">
+                <img src="f/i/services/2.jpg" alt="">
+              </div><div class="services__side services__info">
+                <p class="services__name">Производство</p>
+                <div class="services__text"><p>После утверждения Заказчиком проектного решения и комплектации дымовой трубы мы приступаем к этапу изготовления.</p> АО «Яринжком» уже более 20 лет изготавливает металлические дымовые трубы различного исполнения: самонесущие, на оттяжках, трубы ферменного типа с одним и более газоотводящими стволами, а так же колонные и фасадные дымовые трубы.</div>
+                <a href="#service-popup" class="services__link modal-inline">Подробнее</a>
+              </div>
+            </div>
+            <div class="services__item">
+              <div class="services__side services__info">
+                <p class="services__name">Доставка</p>
+                <p class="services__text">Доставка дымовой трубы может осуществляться автотранспортом или железнодорожным транспортом в зависимости от места установки. Монтаж трубы производится специалистами АО «Яринжком» в максимально сжатые сроки с использованием всей необходимой техники.</p>
+                <a href="#service-popup" class="services__link modal-inline">Подробнее</a>
+              </div><div class="services__side services__img">
+                <img src="f/i/services/3.jpg" alt="">
+              </div>
+            </div>
+            <div class="services__item">
+              <div class="services__side services__img">
+                <img src="f/i/services/4.jpg" alt="">
+              </div><div class="services__side services__info">
+                <p class="services__name">Монтаж</p>
+                <p class="services__text">В процессе монтажа устанавливается и дополнительное оборудование для трубы: лестницы, площадки обслуживания, молниеприёмники, светоограждение.</p>
+                <a href="#service-popup" class="services__link modal-inline">Подробнее</a>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+      <section class="subsection facts">
+        <p class="subsection__title">Дополнительные факты о нас</p>
+        <div class="facts__holder">
+          <div class="holder">
+            <div class="facts__slider">
+              <div class="facts__slider-holder">
+                <div class="facts__item">
+                  <div class="facts__info facts__side">
+                    <p class="facts__title">Мы работаем на рынке более 13 лет</p>
+                    <p class="facts__text">За это время мы доказали свою надежность таким компаниям, как ОАО «ЛУКОЙЛ», ОАО «НК «Роснефть», ОАО «Газпром нефть» и многим другим</p>
+                  </div><div class="facts__side facts__img">
+                    <img src="f/i/facts.jpg" alt="">
+                  </div>
+                </div>
+                <div class="facts__item">
+                  <div class="facts__info facts__side">
+                    <p class="facts__title">Мы работаем на рынке более 13 лет</p>
+                    <p class="facts__text">За это время мы доказали свою надежность таким компаниям, как ОАО «ЛУКОЙЛ», ОАО «НК «Роснефть», ОАО «Газпром нефть» и многим другим</p>
+                  </div><div class="facts__side facts__img">
+                    <img src="f/i/facts.jpg" alt="">
+                  </div>
+                </div>
+                <div class="facts__item">
+                  <div class="facts__info facts__side">
+                    <p class="facts__title">Мы работаем на рынке более 13 лет</p>
+                    <p class="facts__text">За это время мы доказали свою надежность таким компаниям, как ОАО «ЛУКОЙЛ», ОАО «НК «Роснефть», ОАО «Газпром нефть» и многим другим</p>
+                  </div><div class="facts__side facts__img">
+                    <img src="f/i/facts.jpg" alt="">
+                  </div>
+                </div>
+                <div class="facts__item">
+                  <div class="facts__info facts__side">
+                    <p class="facts__title">Мы работаем на рынке более 13 лет</p>
+                    <p class="facts__text">За это время мы доказали свою надежность таким компаниям, как ОАО «ЛУКОЙЛ», ОАО «НК «Роснефть», ОАО «Газпром нефть» и многим другим</p>
+                  </div><div class="facts__side facts__img">
+                    <img src="f/i/facts.jpg" alt="">
+                  </div>
+                </div>
+                <div class="facts__item">
+                  <div class="facts__info facts__side">
+                    <p class="facts__title">Мы работаем на рынке более 13 лет</p>
+                    <p class="facts__text">За это время мы доказали свою надежность таким компаниям, как ОАО «ЛУКОЙЛ», ОАО «НК «Роснефть», ОАО «Газпром нефть» и многим другим</p>
+                  </div><div class="facts__side facts__img">
+                    <img src="f/i/facts.jpg" alt="">
+                  </div>
+                </div>
+                <div class="facts__item">
+                  <div class="facts__info facts__side">
+                    <p class="facts__title">Мы работаем на рынке более 13 лет</p>
+                    <p class="facts__text">За это время мы доказали свою надежность таким компаниям, как ОАО «ЛУКОЙЛ», ОАО «НК «Роснефть», ОАО «Газпром нефть» и многим другим</p>
+                  </div><div class="facts__side facts__img">
+                    <img src="f/i/facts.jpg" alt="">
+                  </div>
+                </div>
+                <div class="facts__item">
+                  <div class="facts__info facts__side">
+                    <p class="facts__title">Мы работаем на рынке более 13 лет</p>
+                    <p class="facts__text">За это время мы доказали свою надежность таким компаниям, как ОАО «ЛУКОЙЛ», ОАО «НК «Роснефть», ОАО «Газпром нефть» и многим другим</p>
+                  </div><div class="facts__side facts__img">
+                    <img src="f/i/facts.jpg" alt="">
+                  </div>
+                </div>
+              </div>
+              <div class="facts__pager"></div>
+            </div>
+          </div>
+        </div>
+      </section>
+      <section class="subsection contacts">
+        <div class="holder">
+          <p class="subsection__title contacts__title">Контакты</p>
+          <p class="contacts__address">г. Москва, ул. Клары Цеткин, д. 33, корп. 35</p>
+          <p class="contacts__phone">+7 (495) 135-08-87</p>
+          <a href="mailto:info@dymovyetruby.ru" class="contacts__mail">info@dymovyetruby.ru</a>
+        </div>
+        <div class="contacts__map" id="map"></div>
+      </section>
+      <section class="subsection consult">
+        <div class="holder">
+          <p class="consult__text">Закажите бесплатный обратный звонок <br>для консультации со специалистом!</p>
+          <a href="#" class="btn consult__btn">Получить консультацию</a>
+        </div>
+      </section>
     </div>
   </div> 
   <footer class="footer">
@@ -258,7 +448,34 @@
       Создание сайта<a class="icon-inteo" target="_blank" rel="external nofollow" href="http://inteo-s.ru"></a></a>
     </p>
   </footer> 
-  <div class="popups"></div>
+  <div class="popups">
+    <div class="popup" id="service-popup">
+      <div class="popup__holder">
+        <div class="popup__half">
+          <img src="f/i/services/5.jpg" alt="">
+          <p class="popup__subtitle">Проектирование</p>
+          <p class="popup__text">Конструкторское бюро ООО «Каскад-металл» имеет огромный опыт в разработке проектов промышленных дымовых труб и способно выполнить самые сложные проектные работыв кратчайшие сроки. Непосредственный контакт конструкторского бюро и производства дымовых труб позволяет максимально сократить издержки при изготовлении дымовых труб, применяя самые удобные и рациональные технологические решения.</p>
+        </div><div class="popup__half">
+          <p class="popup__title">Получить подробную консультацию по проектированию</p>
+          <div class="input-wrap">
+            <label for="input-name" class="input-hint">
+              Фамилия и Имя<span>*</span>
+            </label>
+            <input type="text" id="input-name" class="input" value="">
+          </div>
+          <div class="input-wrap">
+            <label for="input-tel" class="input-hint">
+              Телефон<span>*</span>
+            </label>
+            <input type="tel" id="input-tel" class="input" value="">
+          </div>
+          <input type="email" class="input" placeholder="E-mail">
+          <textarea class="input" placeholder="Введите Ваше сообщение"></textarea>
+          <div class="popup__btn"><a href="#" class="btn">Получить консультацию</a></div>
+        </div>
+      </div>
+    </div>
+  </div>
 </body>
 </html>
 

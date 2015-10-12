@@ -1,20 +1,25 @@
 
 $(document).ready(function(){
 	$(".modal-inline").fancybox({
-		type: 'inline',
-		fixed:false,
-		maxWidth: "100%",
-		title: '',
-		padding: 0,
-		autoResize: false,
-		autoCenter: false,
-		fitToView: false,
-		helpers: {
-			overlay: {
-				fixed: false
-			}
-		}
-	});	
+    type: 'inline',
+    fixed:false,
+    title: '',
+    width: '100%',
+    height: 'auto',
+    padding: 0,
+    autoResize: false,
+    autoSize: false,
+    maxWidth: 880,
+    autoCenter: false,
+    fitToView: false,
+    minWidth: 320,
+    scrolling   : 'no',
+    helpers: {
+      overlay: {
+        fixed: false
+      }
+    }
+  });
 });
 $(function(){
 	$(".js-scroll-link").click(function(){
@@ -27,6 +32,20 @@ $(function(){
   $(".header__ham").click(function(){
   	$(this).toggleClass("header__ham_active");
   });
+  $('.input').each(function() {
+	if ($(this).val() != '') {
+	  $(this).closest(".input-wrap").find("label").addClass('hide');
+	 }
+	});
+	$('.input').blur(function() {
+	 	if ($(this).val() == '') $(this).closest(".input-wrap").find("label").removeClass('hide');
+	});
+	$('.input').keydown(function() {
+	 	$(this).closest(".input-wrap").find("label").addClass('hide');
+	});
+	$('.input').mouseover(function() {
+	 if ($(this).val() != '') {
+	   	$(this).closest(".input-wrap").find("label").addClass('hide');
+	 }
+	});
 });
-
-
