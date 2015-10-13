@@ -4235,6 +4235,7 @@ textarea {
   line-height: 100px;
   text-align: left;
   background: #f9f9f9;
+  overflow: hidden;
   -webkit-transition: max-height 0.3s ease;
   -moz-transition: max-height 0.3s ease;
   -o-transition: max-height 0.3s ease;
