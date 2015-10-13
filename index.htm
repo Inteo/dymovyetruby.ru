@@ -56,17 +56,30 @@
   </head>
 <body>
   <div class="wrap clearfix">  
-    <header class="header js-scroll-target" data-scrollto="1">
+    <header class="header js-scroll-target clearfix" data-scrollto="0">
       <a href="#" class="header__ham iconize-ham">&nbsp;</a>
-      <div class="holder">
-        <div class="logo">
-          <a href="/"><span><span>Дымовые</span> трубы России</span></a>
+      <div class="header__holder">
+        <div class="holder">
+          <div class="logo">
+            <a href="/"><span><span>Дымовые</span> трубы России</span></a>
+          </div>
+          <div class="header__mail"><a href="mailto:info@dymovyetruby.ru"><i class="icon-mail"></i>info@dymovyetruby.ru</a></div>
         </div>
-        <div class="header__mail"><a href="mailto:info@dymovyetruby.ru"><i class="icon-mail"></i>info@dymovyetruby.ru</a></div>
       </div>
       <div class="header__phone">
         <p>+7 (495) 135-08-87</p>
-        <a href="#">Закзать обратный звонок</a>
+        <a href="#callback-popup" class="modal-inline">Закзать обратный звонок</a>
+      </div>
+      <div class="ham-menu">
+        <ul>
+          <li><a href="#" class="js-scroll-link" data-scrollto="1">О нас в цифрах</a>
+          </li> <li><a href="#" class="js-scroll-link" data-scrollto="2">Виды дымовых труб</a>
+          </li> <li><a href="#" class="js-scroll-link" data-scrollto="3">Выполненные работы</a>
+          </li> <li><a href="#" class="js-scroll-link" data-scrollto="4">Услуги</a>
+          </li> <li><a href="#" class="js-scroll-link" data-scrollto="5">7 причин работать с нами</a>
+          </li> <li><a href="#" class="js-scroll-link" data-scrollto="6">Нам доверяют</a></li>
+        </ul>
+        <a href="#" class="ham-menu__search">&nbsp;</a>
       </div>
     </header>
     <div class="content">
@@ -84,7 +97,7 @@
           <a href="#" class="btn consult__btn">Получить консультацию</a>
         </div>
       </section>
-      <section class="subsection achiv">
+      <section class="subsection achiv js-scroll-target" data-scrollto="1">
         <img src="f/i/achiv-back.png" alt="">
         <div class="holder">
           <div class="achiv__item achiv__item_1">
@@ -101,7 +114,7 @@
           </div>
         </div>
       </section>
-      <section class="subsection products">
+      <section class="subsection products js-scroll-target" data-scrollto="2">
         <div class="holder">
           <div class="products-service">
             <div class="products-service__holder">
@@ -127,31 +140,31 @@
           <p class="products__title">Мы производим 5 видов дымовых труб</p>
           <div class="products__holder">
             <div class="products__item">
-              <a href="#" class="products__img">
+              <a href="#tube-popup" class="products__img modal-inline">
                 <img src="f/i/products/1.png" alt="">
               </a>
               <p class="products__subtitle">Ферменные дымовые <br>трубы</p>
               <p class="products__text">Состоит из нескольких стальных теплоизолированных газоходов закреплённых на несущей фермовой колонне или ферме.</p>
             </div><div class="products__item">
-              <a href="#" class="products__img">
+              <a href="#tube-popup" class="products__img modal-inline">
                 <img src="f/i/products/2.png" alt="">
               </a>
               <p class="products__subtitle">Самонесущие дымовые трубы</p>
               <p class="products__text">Одноствольная металлическая труба, внутрь которой заведены газоходы от одной или нескольких установок.</p>
             </div><div class="products__item">
-              <a href="#" class="products__img">
+              <a href="#tube-popup" class="products__img modal-inline">
                 <img src="f/i/products/3.png" alt="">
               </a>
               <p class="products__subtitle">Колонные дымовые <br>трубы</p>
               <p class="products__text">Металлическая труба, несущей частью которой является наружная обечайка.</p>
             </div><div class="products__item">
-              <a href="#" class="products__img">
+              <a href="#tube-popup" class="products__img modal-inline">
                 <img src="f/i/products/4.png" alt="">
               </a>
               <p class="products__subtitle">Фасадные дымовые трубы</p>
               <p class="products__text">Стальная труба, которая крепится к фасаду здания.</p>
             </div><div class="products__item">
-              <a href="#" class="products__img">
+              <a href="#tube-popup" class="products__img modal-inline">
                 <img src="f/i/products/5.png" alt="">
               </a>
               <p class="products__subtitle">Дымовые трубы <br>на растяжках</p>
@@ -166,7 +179,7 @@
           </div>
         </div>
       </section>
-      <section class="subsection projects">
+      <section class="subsection projects js-scroll-target" data-scrollto="3">
         <div class="holder">
           <p class="projects__title subsection__title">Выполненые проекты</p>
           <p class="projects__subtitle">Нас уже знают в 30 городах России</p>
@@ -181,7 +194,7 @@
                 </span>
               </a>
             </div><div class="projects__item">
-              <a href="#">
+              <a href="#e">
                 <img src="f/i/projects/2.jpg" alt="">
                 <span class="projects__text">
                   <span class="projects__name">Замена дымовых труб на растяжках в количестве трех штук</span>
@@ -238,7 +251,7 @@
           </div>
         </div>
       </section>
-      <section class="subsection trust">
+      <section class="subsection trust js-scroll-target" data-scrollto="6">
         <div class="holder">
           <div class="trust__title"><p>Нам доверяют</p></div>
           <div class="trust__wrap">
@@ -274,7 +287,7 @@
           </div>
         </div>
       </section>
-      <section class="subsection services">
+      <section class="subsection services js-scroll-target" data-scrollto="4">
         <div class="holder">
           <p class="subsection__title">Услуги</p>
           <div class="services__holder">
@@ -317,7 +330,7 @@
           </div>
         </div>
       </section>
-      <section class="subsection facts">
+      <section class="subsection facts js-scroll-target" data-scrollto="5">
         <p class="subsection__title">Дополнительные факты о нас</p>
         <div class="facts__holder">
           <div class="holder">
@@ -443,7 +456,7 @@
         </div>
       </div>
     </div>
-    <a href="#" class="footer__up js-scroll-link" data-scrollto="1">&nbsp;</a>
+    <a href="#" class="footer__up js-scroll-link" data-scrollto="0">&nbsp;</a>
     <p class="madeby">
       Создание сайта<a class="icon-inteo" target="_blank" rel="external nofollow" href="http://inteo-s.ru"></a></a>
     </p>
@@ -454,7 +467,7 @@
         <div class="popup__half">
           <img src="f/i/services/5.jpg" alt="">
           <p class="popup__subtitle">Проектирование</p>
-          <p class="popup__text">Конструкторское бюро ООО «Каскад-металл» имеет огромный опыт в разработке проектов промышленных дымовых труб и способно выполнить самые сложные проектные работыв кратчайшие сроки. Непосредственный контакт конструкторского бюро и производства дымовых труб позволяет максимально сократить издержки при изготовлении дымовых труб, применяя самые удобные и рациональные технологические решения.</p>
+          <p class="popup__text">Конструкторское бюро ООО «Каскад-металл» имеет огромный опыт в разработке проектов промышленных дымовых труб и способно выполнить самые сложные проектные работы в кратчайшие сроки. Непосредственный контакт конструкторского бюро и производства дымовых труб позволяет максимально сократить издержки при изготовлении дымовых труб, применяя самые удобные и рациональные технологические решения.</p>
         </div><div class="popup__half">
           <p class="popup__title">Получить подробную консультацию по проектированию</p>
           <div class="input-wrap">
@@ -473,6 +486,59 @@
           <textarea class="input" placeholder="Введите Ваше сообщение"></textarea>
           <div class="popup__btn"><a href="#" class="btn">Получить консультацию</a></div>
         </div>
+      </div>
+    </div>
+    <div class="popup" id="tube-popup">
+      <div class="popup__holder">
+        <div class="popup__half">
+          <img src="f/i/tube.jpg" alt="">
+        </div><div class="popup__half">
+          <p class="popup__title">Трубы дымовые (вытяжные) самонесущие</p>
+          <div class="popup__notes">
+            <p class="popup__notes-title">Плюсы:</p>
+            <div class="popup__notes-text">
+              <p>Сравнительно дешевое производство</p>
+              <p>Простота конструкции</p>
+            </div>
+            <p class="popup__notes-title">Минусы:</p>
+            <p class="popup__notes-text">При частичном разрушении ствола, он подлежит замене целиком</p>
+          </div>
+          <div class="input-wrap">
+            <label for="input-name" class="input-hint">
+              Фамилия и Имя<span>*</span>
+            </label>
+            <input type="text" id="input-name" class="input" value="">
+          </div>
+          <div class="input-wrap">
+            <label for="input-tel" class="input-hint">
+              Телефон<span>*</span>
+            </label>
+            <input type="tel" id="input-tel" class="input" value="">
+          </div>
+          <input type="email" class="input" placeholder="E-mail">
+          <textarea class="input" placeholder="Введите Ваше сообщение"></textarea>
+          <div class="popup__btn"><a href="#" class="btn">Получить консультацию</a></div>
+        </div>
+      </div>
+    </div>
+    <div class="popup popup_callback" id="callback-popup" style="width: 500px;">
+      <div class="popup__holder">
+        <p class="popup__title">Закажите бесплатный обратный звонок для консультации со специалистом!</p>
+        <div class="input-wrap">
+          <label for="input-name" class="input-hint">
+            Фамилия и Имя<span>*</span>
+          </label>
+          <input type="text" id="input-name" class="input" value="">
+        </div>
+        <div class="input-wrap">
+          <label for="input-tel" class="input-hint">
+            Телефон<span>*</span>
+          </label>
+          <input type="tel" id="input-tel" class="input" value="">
+        </div>
+        <input type="email" class="input" placeholder="E-mail">
+        <textarea class="input" placeholder="Введите Ваше сообщение"></textarea>
+        <div class="popup__btn"><a href="#" class="btn">Получить консультацию</a></div>
       </div>
     </div>
   </div>

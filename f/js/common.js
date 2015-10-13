@@ -8,9 +8,7 @@ $(document).ready(function(){
     height: 'auto',
     padding: 0,
     autoResize: false,
-    autoSize: false,
-    maxWidth: 880,
-    autoCenter: false,
+    autoSize: true,
     fitToView: false,
     minWidth: 320,
     scrolling   : 'no',
@@ -47,5 +45,8 @@ $(function(){
 	 if ($(this).val() != '') {
 	   	$(this).closest(".input-wrap").find("label").addClass('hide');
 	 }
+	});
+	$(".header__ham").click(function(){
+		$(".ham-menu").toggleClass("ham-menu_active");
 	});
 });

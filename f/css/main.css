@@ -3801,23 +3801,23 @@ button.close {
   font-weight: normal;
 }
 ::-webkit-input-placeholder {
-  line-height: 24px;
+  line-height: 20px;
   font-size: 14px;
   color: #d2d2d2;
 }
 ::-moz-placeholder {
-  line-height: 24px;
+  line-height: 20px;
   font-size: 14px;
   color: #d2d2d2;
   opacity: 1;
 }
 :-ms-input-placeholder {
-  line-height: 24px;
+  line-height: 20px;
   font-size: 14px;
   color: #d2d2d2;
 }
 input:-moz-placeholder {
-  line-height: 24px;
+  line-height: 20px;
   font-size: 14px;
   color: #d2d2d2;
   opacity: 1;
@@ -3911,6 +3911,13 @@ textarea {
 .popup {
   padding: 20px;
   background: url(../../f/i/pattern2.png) repeat;
+  max-width: 880px;
+}
+.popup_callback input,
+.popup_callback textarea,
+.popup_callback label,
+.popup_callback .popup__title {
+  text-align: center !important;
 }
 .popup__holder {
   padding: 40px;
@@ -3954,6 +3961,18 @@ textarea {
 }
 .popup__text {
   color: #fff;
+}
+.popup__notes {
+  margin-bottom: 30px;
+  margin-top: -25px;
+}
+.popup__notes-title {
+  color: #3d8abb;
+}
+.popup__notes-text {
+  color: #fff;
+  padding-left: 20px;
+  margin-bottom: 10px;
 }
 [class^="icon-"],
 [class*=" icon-"] {
@@ -4013,6 +4032,7 @@ textarea {
   margin: 0 0 -500px 0;
   padding: 0;
   min-width: 1000px;
+  overflow: hidden;
 }
 .wrap:after {
   content: '';
@@ -4097,11 +4117,17 @@ textarea {
   width: 100px;
   height: 100px;
   position: absolute;
-  right: 110px;
+  right: 5%;
   top: 0;
   bottom: 100px;
   margin: auto 0;
   display: block;
+}
+@media (max-width: 1350px) {
+  .footer__up {
+    top: auto;
+    bottom: 0;
+  }
 }
 .footer__up:before {
   content: '';
@@ -4122,7 +4148,7 @@ textarea {
   text-align: center;
 }
 .holder {
-  width: 1000px;
+  max-width: 1000px;
   padding: 0 40px;
   margin: 0 auto;
   position: relative;
@@ -4130,20 +4156,40 @@ textarea {
 .header {
   min-height: 100px;
   position: relative;
+  text-align: center;
 }
-.header .holder {
-  max-width: 1000px;
+.header__holder {
+  position: absolute;
+  padding: 27px 360px;
   height: 100px;
-  padding: 27px 40px;
+  left: 0;
+  right: 0;
+  margin: 0 auto;
+  width: 100%;
+  max-width: 9999px;
+  text-align: left;
+}
+@media (max-width: 1300px) {
+  .header__holder {
+    padding-left: 241px;
+  }
+}
+.header__holder .holder {
+  padding: 0;
+  max-width: 920px;
 }
 .header__mail {
-  padding-right: 50px;
   padding-top: 13px;
   float: right;
 }
 .header__mail a {
   line-height: 20px;
   font-size: 16px;
+}
+@media (max-width: 1100px) {
+  .header__mail {
+    display: none;
+  }
 }
 .header__phone {
   background: #002c6b;
@@ -4154,6 +4200,7 @@ textarea {
   position: absolute;
   right: 0;
   top: 0;
+  z-index: 10;
 }
 .header__phone p {
   font: bold 18px 'Proxima Nova', sans-serif;
@@ -4172,12 +4219,59 @@ textarea {
   position: absolute;
   left: 0;
   top: 0;
+  z-index: 10;
   background: #f9f9f9;
 }
 .header__ham_active:before {
   background-position: -131px 0;
   width: 20px;
   height: 3px;
+}
+.ham-menu {
+  max-height: 0;
+  margin-top: 100px;
+  padding-left: 100px;
+  padding-right: 40px;
+  line-height: 100px;
+  text-align: left;
+  background: #f9f9f9;
+  -webkit-transition: max-height 0.3s ease;
+  -moz-transition: max-height 0.3s ease;
+  -o-transition: max-height 0.3s ease;
+  -ms-transition: max-height 0.3s ease;
+  transition: max-height 0.3s ease;
+}
+.ham-menu_active {
+  max-height: 100px;
+}
+@media (max-width: 1200px) {
+  .ham-menu {
+    padding-left: 40px;
+  }
+}
+.ham-menu ul {
+  list-style: none;
+  text-align: justify;
+  max-width: 1400px;
+}
+.ham-menu ul:after {
+  content: '';
+  display: inline-block;
+  vertical-align: middle;
+  width: 100%;
+}
+.ham-menu ul li {
+  display: inline-block;
+  vertical-align: middle;
+}
+.ham-menu ul li a {
+  font: bold 18px 'Proxima Nova', sans-serif;
+  color: #000;
+}
+@media (max-width: 1200px) {
+  .ham-menu ul li a {
+    font-size: 16px;
+  }
 }
 .logo {
   display: inline-block;
@@ -4187,11 +4281,6 @@ textarea {
   margin-bottom: 0;
   vertical-align: bottom;
   line-height: 45px;
-}
-@media (max-width: 1110px) {
-  .logo {
-    margin-left: -40px;
-  }
 }
 .logo a {
   display: inline-block;
@@ -4219,6 +4308,7 @@ textarea {
   height: 630px;
   position: relative;
   z-index: 1;
+  overflow: hidden;
   padding-top: 180px;
 }
 .preface img {
