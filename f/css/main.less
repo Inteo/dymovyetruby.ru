@@ -4206,15 +4206,12 @@ textarea {
     }
 	}
 	&__mail {
-		padding-top: 13px;
+		padding-top: 12px;
 		float: right;
 		& a {
 			line-height: 20px;
 			font-size: 16px;
 		}
-    @media (max-width: 1100px) {
-      display: none;
-    }
 	}
 	&__phone {
 		background: #002c6b;
@@ -4313,22 +4310,33 @@ textarea {
 }
 .logo {
 	display: inline-block;
+  vertical-align: top;
 	margin-left: -101px;
 	padding-left: 101px;
+  line-height: 61px;
+  margin-top: -7px;
+  @media (max-width: 1100px) {
+    padding-left: 81px;
+  }
 	position: relative;
 	margin-bottom: 0;
-	vertical-align: bottom;
-	line-height: 45px;
 	& a {
 		display: inline-block;
 		vertical-align: middle;
+    margin-top: -5px;
     line-height: 24px;
+    @media (max-width: 1100px) {
+      
+    }
 		& span {
 			font: 24px 'Proxima Nova', sans-serif;
 			letter-spacing: -.02em;
 			& span {
 				font-weight: bold;
 				margin-right: 5px;
+        @media (max-width: 1100px) {
+          display: block;
+        }
 			}
 			&:before {
 				content: '';
@@ -4336,7 +4344,7 @@ textarea {
 				height: 61px;
 				position: absolute;
 				left: 0px;
-				top: -10px;
+				top: 0px;
 				background: url(../../f/i/icons.png) 0 0;
 			}
 		}
