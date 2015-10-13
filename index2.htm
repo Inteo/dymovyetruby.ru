@@ -23,16 +23,7 @@
     <script src="f/js/common.js"></script>
     <script>
       $(document).ready(function(){
-        $('.facts__slider-holder').carouFredSel({
-          responsive: true,
-          pagination: '.facts__pager',
-          width: "100%",
-          scroll: {
-            duration: 450,
-            timeoutDuration: 9000,
-            fx: 'crossfade',
-          }
-        });
+      
       });
       ymaps.ready(function () {
         var myMap = new ymaps.Map('map', {
@@ -72,12 +63,12 @@
       </div>
       <div class="ham-menu">
         <ul>
-          <li><a href="#" class="js-scroll-link" data-scrollto="1">О нас в цифрах</a>
-          </li> <li><a href="#" class="js-scroll-link" data-scrollto="2">Виды дымовых труб</a>
-          </li> <li><a href="#" class="js-scroll-link" data-scrollto="3">Выполненные работы</a>
-          </li> <li><a href="#" class="js-scroll-link" data-scrollto="4">Услуги</a>
-          </li> <li><a href="#" class="js-scroll-link" data-scrollto="5">7 причин работать с нами</a>
-          </li> <li><a href="#" class="js-scroll-link" data-scrollto="6">Нам доверяют</a></li>
+          <li><a href="#">О нас в цифрах</a>
+          </li> <li><a href="#">Виды дымовых труб</a>
+          </li> <li><a href="#">Выполненные работы</a>
+          </li> <li><a href="#">Услуги</a>
+          </li> <li><a href="#">7 причин работать с нами</a>
+          </li> <li><a href="#">Нам доверяют</a></li>
         </ul>
         <a href="#" class="ham-menu__search iconize-search">&nbsp;</a>
       </div>
@@ -97,173 +88,28 @@
           <a href="#" class="btn consult__btn">Получить консультацию</a>
         </div>
       </section>
-      <section class="subsection achiv js-scroll-target" data-scrollto="1">
-        <img src="f/i/achiv-back.png" alt="">
+      <section class="subsection info info_blue">
         <div class="holder">
-          <div class="achiv__item achiv__item_1">
-            <p class="achiv__num">1200</p>
-            <p class="achiv__text">м<sup>2</sup> из 9000 м<sup>2</sup> производственных <br> площадей для дымовых труб</p>
-          </div>
-          <div class="achiv__item achiv__item_2">
-            <p class="achiv__num">60</p>
-            <p class="achiv__text">максимальная <br> высота производимых <br>дымовых труб</p>
-          </div>
-          <div class="achiv__item achiv__item_3">
-            <p class="achiv__num">20</p>
-            <p class="achiv__text">лет успешной работы</p>
-          </div>
-        </div>
-      </section>
-      <section class="subsection products js-scroll-target" data-scrollto="2">
-        <div class="holder">
-          <div class="products-service">
-            <div class="products-service__holder">
-              <div class="products-service__item products-service__item_project">
-                <a href="#" class="">
-                  <span class="products-service__title">Проектирование</span>
-                </a>
-              </div><div class="products-service__item products-service__item_production">
-                <a href="#" class="">
-                  <span class="products-service__title">Производство</span>
-                </a>
-              </div><div class="products-service__item products-service__item_delivery">
-                <a href="#" class="">
-                  <span class="products-service__title">Доставка</span>
-                </a>
-              </div><div class="products-service__item products-service__item_install">
-                <a href="#" class="">
-                  <span class="products-service__title">Монтаж</span>
-                </a>
+          <p class="subsection__title info__title">Трубы дымовые (вытяжные) самонесущие</p>
+          <div class="subsection__half">
+            <img src="f/i/tube2.jpg" alt="">
+          </div><div class="subsection__half">
+            <div class="info__text">
+              <p>Одноствольная металлическая труба, внутрь которой заведены газоходы от одной или нескольких установок. При необходимости возможно возведение многоствольной трубы (массивной конструкции из нескольких газовых стволов и общего каркаса).</p><p>Ствол трубы производится из нержавеющей стали, устойчивой к воздействию высоких температур и кислой среды конденсата, который образуется на стенках газохода при удалении продуктов сгорания топлива. По усмотрению Заказчика ствол трубы может быть утеплён слоем изоляции (минеральная вата толщиной 25 мм – 100 мм). Теплоизоляционный слой затем закрывается внешней обечайкой из алюминия, оцинкованной или нержавеющей стали. Таким образом, ствол трубы имеет трёхслойное строение: рабочая поверхность, слой теплоизоляции, внешняя обечайка.</p><p>Иногда проект предполагает усиление конструкции трубы, тогда основание каркаса оснащают дополнительными рёбрами жёсткости. Это увеличивает площадь основания ствола, и нагрузка самонесущей трубы распределяется по фундаменту более равномерно.</p>
+            </div>
+            <div class="info__notes">
+              <p class="info__notes-title">Плюсы:</p>
+              <div class="info__notes-text">
+                <p>Сравнительно дешевое производство</p>
+                <p>Простота конструкции</p>
               </div>
             </div>
-          </div>
-          <p class="products__title">Мы производим 5 видов дымовых труб</p>
-          <div class="products__holder">
-            <div class="products__item">
-              <a href="#tube-popup" class="products__img modal-inline">
-                <img src="f/i/products/1.png" alt="">
-              </a>
-              <p class="products__subtitle">Ферменные дымовые <br>трубы</p>
-              <p class="products__text">Состоит из нескольких стальных теплоизолированных газоходов закреплённых на несущей фермовой колонне или ферме.</p>
-            </div><div class="products__item">
-              <a href="#tube-popup" class="products__img modal-inline">
-                <img src="f/i/products/2.png" alt="">
-              </a>
-              <p class="products__subtitle">Самонесущие дымовые трубы</p>
-              <p class="products__text">Одноствольная металлическая труба, внутрь которой заведены газоходы от одной или нескольких установок.</p>
-            </div><div class="products__item">
-              <a href="#tube-popup" class="products__img modal-inline">
-                <img src="f/i/products/3.png" alt="">
-              </a>
-              <p class="products__subtitle">Колонные дымовые <br>трубы</p>
-              <p class="products__text">Металлическая труба, несущей частью которой является наружная обечайка.</p>
-            </div><div class="products__item">
-              <a href="#tube-popup" class="products__img modal-inline">
-                <img src="f/i/products/4.png" alt="">
-              </a>
-              <p class="products__subtitle">Фасадные дымовые трубы</p>
-              <p class="products__text">Стальная труба, которая крепится к фасаду здания.</p>
-            </div><div class="products__item">
-              <a href="#tube-popup" class="products__img modal-inline">
-                <img src="f/i/products/5.png" alt="">
-              </a>
-              <p class="products__subtitle">Дымовые трубы <br>на растяжках</p>
-              <p class="products__text">Металлическая одноствольная дымовая труба, отводящая дымовые и переработанные газы <br>от разных видов промышленного оборудования.</p>
-            </div><div class="products__item">
-              <div class="products__img">
-                 <div class="products__count-price">
-                   <a href="#">Расчитать<br>стоймость<br>трубы</a>
-                 </div>
-              </div>
+            <div class="info__notes">
+              <p class="info__notes-title">Минусы:</p>
+              <p class="info__notes-text">При частичном разрушении ствола, он подлежит замене целиком </p>
             </div>
           </div>
-        </div>
-      </section>
-      <section class="subsection projects js-scroll-target" data-scrollto="3">
-        <div class="holder">
-          <p class="projects__title subsection__title">Выполненые проекты</p>
-          <p class="projects__subtitle">Нас уже знают в 30 городах России</p>
-          <div class="projects__holder">
-            <div class="projects__item">
-              <a href="#">
-                <img src="f/i/projects/1.jpg" alt="">
-                <span class="projects__text">
-                  <span class="projects__name">Две двуствольные свободностоящие дымовые трубы котельной</span>
-                  <span class="projects__detail">Д=2000мм H=30м</span>
-                  <span class="projects__detail">Саратовская обл., г. Энгельс</span>
-                </span>
-              </a>
-            </div><div class="projects__item">
-              <a href="#e">
-                <img src="f/i/projects/2.jpg" alt="">
-                <span class="projects__text">
-                  <span class="projects__name">Замена дымовых труб на растяжках в количестве трех штук</span>
-                  <span class="projects__detail">Д=920мм H=30м </span>
-                  <span class="projects__detail">г. Москва</span>
-                </span>
-              </a>
-            </div><div class="projects__item">
-              <a href="#">
-                <img src="f/i/projects/3.jpg" alt="">
-                <span class="projects__text">
-                  <span class="projects__name">Четырехствольная свободностоящая дымовая труба котельной</span>
-                  <span class="projects__detail">Д=2400мм H=50м</span>
-                  <span class="projects__detail">Московская обл., г. Истра</span>
-                </span>
-              </a>
-            </div><div class="projects__item projects__item_wide">
-              <a href="#">
-                <img src="f/i/projects/4.jpg" alt="">
-                <span class="projects__text">
-                  <span class="projects__name">Четырехствольная самонесущая дымовая труба ТЭЦ</span>
-                  <span class="projects__detail">Д=3260мм H=25м</span>
-                  <span class="projects__detail">Московская обл., г. Домодедово</span>
-                </span>
-              </a>
-            </div><div class="projects__item">
-              <a href="#">
-                <img src="f/i/projects/5.jpg" alt="">
-                <span class="projects__text">
-                  <span class="projects__name">Три фермовые дымовые трубы в металлическом каркасе</span>
-                  <span class="projects__detail">H=10м</span>
-                  <span class="projects__detail">Московская обл., пос. Рогово</span>
-                </span>
-              </a>
-            </div><div class="projects__item">
-              <a href="#">
-                <img src="f/i/projects/1.jpg" alt="">
-                <span class="projects__text">
-                  <span class="projects__name">Трехствольная самонесущая дымовая труба котельной</span>
-                  <span class="projects__detail">Д=2000мм Н=29м</span>
-                  <span class="projects__detail">г. Москва</span>
-                </span>
-              </a>
-            </div><div class="projects__item projects__item_wide">
-              <a href="#">
-                <img src="f/i/projects/6.jpg" alt="">
-                <span class="projects__text">
-                  <span class="projects__name">Двуствольная фермовая дымовая труба в металлическом каркасе</span>
-                  <span class="projects__detail">Д=2000мм H=55м</span>
-                  <span class="projects__detail">Ленинградская обл., г. Сосновый бор</span>
-                </span>
-              </a>
-            </div>
-          </div>
-        </div>
-      </section>
-      <section class="subsection trust js-scroll-target" data-scrollto="6">
-        <div class="holder">
-          <div class="trust__title"><p>Нам доверяют</p></div>
-          <div class="trust__wrap">
-            <div class="trust__holder">
-              <div class="trust__item"><img src="f/i/trust/1.jpg">
-              </div><div class="trust__item"><img src="f/i/trust/2.jpg">
-              </div><div class="trust__item"><img src="f/i/trust/3.jpg">
-              </div><div class="trust__item"><img src="f/i/trust/4.jpg">
-              </div><div class="trust__item"><img src="f/i/trust/5.jpg"></div>
-            </div>
-          </div>
-        </div>
+        </div> 
       </section>
       <section class="subsection consult-form">
         <div class="holder">
@@ -287,114 +133,20 @@
           </div>
         </div>
       </section>
-      <section class="subsection services js-scroll-target" data-scrollto="4">
+      <section class="subsection achiv achiv_depad">
+        <img src="f/i/achiv-back.png" alt="">
         <div class="holder">
-          <p class="subsection__title">Услуги</p>
-          <div class="services__holder">
-            <div class="services__item">
-              <div class="services__side services__info">
-                <p class="services__name">Проектирование</p>
-                <p class="services__text">Проектирование дымовой трубы всегда осуществляется индивидуально: для конкретного объекта, с установленными параметрами и условиями эксплуатации. Для долгосрочной и безопасной эксплуатации дымовой трубы необходимо запроектировать её в соответствии со всеми действующим нормам и правилам, потребностями Заказчика, ветровыми нагрузками, а также сейсмичностью района расположения объекта.</p>
-                <a href="#service-popup" class="services__link modal-inline">Подробнее</a>
-              </div><div class="services__side services__img">
-                <img src="f/i/services/1.jpg" alt="">
-              </div>
-            </div>
-            <div class="services__item">
-              <div class="services__side services__img">
-                <img src="f/i/services/2.jpg" alt="">
-              </div><div class="services__side services__info">
-                <p class="services__name">Производство</p>
-                <div class="services__text"><p>После утверждения Заказчиком проектного решения и комплектации дымовой трубы мы приступаем к этапу изготовления.</p> АО «Яринжком» уже более 20 лет изготавливает металлические дымовые трубы различного исполнения: самонесущие, на оттяжках, трубы ферменного типа с одним и более газоотводящими стволами, а так же колонные и фасадные дымовые трубы.</div>
-                <a href="#service-popup" class="services__link modal-inline">Подробнее</a>
-              </div>
-            </div>
-            <div class="services__item">
-              <div class="services__side services__info">
-                <p class="services__name">Доставка</p>
-                <p class="services__text">Доставка дымовой трубы может осуществляться автотранспортом или железнодорожным транспортом в зависимости от места установки. Монтаж трубы производится специалистами АО «Яринжком» в максимально сжатые сроки с использованием всей необходимой техники.</p>
-                <a href="#service-popup" class="services__link modal-inline">Подробнее</a>
-              </div><div class="services__side services__img">
-                <img src="f/i/services/3.jpg" alt="">
-              </div>
-            </div>
-            <div class="services__item">
-              <div class="services__side services__img">
-                <img src="f/i/services/4.jpg" alt="">
-              </div><div class="services__side services__info">
-                <p class="services__name">Монтаж</p>
-                <p class="services__text">В процессе монтажа устанавливается и дополнительное оборудование для трубы: лестницы, площадки обслуживания, молниеприёмники, светоограждение.</p>
-                <a href="#service-popup" class="services__link modal-inline">Подробнее</a>
-              </div>
-            </div>
+          <div class="achiv__item achiv__item_1">
+            <p class="achiv__num">1200</p>
+            <p class="achiv__text">м<sup>2</sup> из 9000 м<sup>2</sup> производственных <br> площадей для дымовых труб</p>
           </div>
-        </div>
-      </section>
-      <section class="subsection facts js-scroll-target" data-scrollto="5">
-        <p class="subsection__title">Дополнительные факты о нас</p>
-        <div class="facts__holder">
-          <div class="holder">
-            <div class="facts__slider">
-              <div class="facts__slider-holder">
-                <div class="facts__item">
-                  <div class="facts__info facts__side">
-                    <p class="facts__title">Мы работаем на рынке более 13 лет</p>
-                    <p class="facts__text">За это время мы доказали свою надежность таким компаниям, как ОАО «ЛУКОЙЛ», ОАО «НК «Роснефть», ОАО «Газпром нефть» и многим другим</p>
-                  </div><div class="facts__side facts__img">
-                    <img src="f/i/facts.jpg" alt="">
-                  </div>
-                </div>
-                <div class="facts__item">
-                  <div class="facts__info facts__side">
-                    <p class="facts__title">Мы работаем на рынке более 13 лет</p>
-                    <p class="facts__text">За это время мы доказали свою надежность таким компаниям, как ОАО «ЛУКОЙЛ», ОАО «НК «Роснефть», ОАО «Газпром нефть» и многим другим</p>
-                  </div><div class="facts__side facts__img">
-                    <img src="f/i/facts.jpg" alt="">
-                  </div>
-                </div>
-                <div class="facts__item">
-                  <div class="facts__info facts__side">
-                    <p class="facts__title">Мы работаем на рынке более 13 лет</p>
-                    <p class="facts__text">За это время мы доказали свою надежность таким компаниям, как ОАО «ЛУКОЙЛ», ОАО «НК «Роснефть», ОАО «Газпром нефть» и многим другим</p>
-                  </div><div class="facts__side facts__img">
-                    <img src="f/i/facts.jpg" alt="">
-                  </div>
-                </div>
-                <div class="facts__item">
-                  <div class="facts__info facts__side">
-                    <p class="facts__title">Мы работаем на рынке более 13 лет</p>
-                    <p class="facts__text">За это время мы доказали свою надежность таким компаниям, как ОАО «ЛУКОЙЛ», ОАО «НК «Роснефть», ОАО «Газпром нефть» и многим другим</p>
-                  </div><div class="facts__side facts__img">
-                    <img src="f/i/facts.jpg" alt="">
-                  </div>
-                </div>
-                <div class="facts__item">
-                  <div class="facts__info facts__side">
-                    <p class="facts__title">Мы работаем на рынке более 13 лет</p>
-                    <p class="facts__text">За это время мы доказали свою надежность таким компаниям, как ОАО «ЛУКОЙЛ», ОАО «НК «Роснефть», ОАО «Газпром нефть» и многим другим</p>
-                  </div><div class="facts__side facts__img">
-                    <img src="f/i/facts.jpg" alt="">
-                  </div>
-                </div>
-                <div class="facts__item">
-                  <div class="facts__info facts__side">
-                    <p class="facts__title">Мы работаем на рынке более 13 лет</p>
-                    <p class="facts__text">За это время мы доказали свою надежность таким компаниям, как ОАО «ЛУКОЙЛ», ОАО «НК «Роснефть», ОАО «Газпром нефть» и многим другим</p>
-                  </div><div class="facts__side facts__img">
-                    <img src="f/i/facts.jpg" alt="">
-                  </div>
-                </div>
-                <div class="facts__item">
-                  <div class="facts__info facts__side">
-                    <p class="facts__title">Мы работаем на рынке более 13 лет</p>
-                    <p class="facts__text">За это время мы доказали свою надежность таким компаниям, как ОАО «ЛУКОЙЛ», ОАО «НК «Роснефть», ОАО «Газпром нефть» и многим другим</p>
-                  </div><div class="facts__side facts__img">
-                    <img src="f/i/facts.jpg" alt="">
-                  </div>
-                </div>
-              </div>
-              <div class="facts__pager"></div>
-            </div>
+          <div class="achiv__item achiv__item_2">
+            <p class="achiv__num">60</p>
+            <p class="achiv__text">максимальная <br> высота производимых <br>дымовых труб</p>
+          </div>
+          <div class="achiv__item achiv__item_3">
+            <p class="achiv__num">20</p>
+            <p class="achiv__text">лет успешной работы</p>
           </div>
         </div>
       </section>
