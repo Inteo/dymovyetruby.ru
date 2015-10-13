@@ -3998,6 +3998,16 @@ textarea {
   content: '';
   background: url('../../f/i/icons.png') -9999px -9999px no-repeat;
 }
+.iconize-search:before {
+  width: 18px;
+  height: 16px;
+  background-position: -80px -114px;
+  left: 0;
+  right: 0;
+  top: 0;
+  bottom: 0;
+  margin: auto;
+}
 .icon-mail {
   width: 24px;
   height: 21px;
@@ -4236,6 +4246,7 @@ textarea {
   text-align: left;
   background: #f9f9f9;
   overflow: hidden;
+  position: relative;
   -webkit-transition: max-height 0.3s ease;
   -moz-transition: max-height 0.3s ease;
   -o-transition: max-height 0.3s ease;
@@ -4253,7 +4264,9 @@ textarea {
 .ham-menu ul {
   list-style: none;
   text-align: justify;
-  max-width: 1400px;
+  max-width: 1540px;
+  padding-right: 80px;
+  margin-left: -20px;
 }
 .ham-menu ul:after {
   content: '';
@@ -4264,15 +4277,31 @@ textarea {
 .ham-menu ul li {
   display: inline-block;
   vertical-align: middle;
+  line-height: 24px;
+  text-align: center;
+  margin-left: 20px;
 }
 .ham-menu ul li a {
   font: bold 18px 'Proxima Nova', sans-serif;
   color: #000;
+  display: inline-block;
+  vertical-align: top;
 }
 @media (max-width: 1200px) {
   .ham-menu ul li a {
-    font-size: 16px;
+    font-size: 14px;
+    line-height: 30px;
   }
+}
+.ham-menu__search {
+  width: 100px;
+  height: 100px;
+  position: absolute;
+  right: 0;
+  top: 0;
+}
+a.ham-menu__search:hover {
+  background: #ff424b;
 }
 .logo {
   display: inline-block;
@@ -4316,9 +4345,9 @@ textarea {
   position: absolute;
   top: 0;
   left: 50%;
-  margin-left: -800px;
+  margin-left: -960px;
   height: 100%;
-  width: 1600px;
+  width: 1920px;
   z-index: -1;
 }
 .preface__text {
@@ -4352,9 +4381,9 @@ textarea {
 .achiv img {
   position: absolute;
   bottom: -5px;
-  left: 0;
-  right: 0;
-  margin: 0 auto;
+  left: 50%;
+  width: 1715px;
+  margin-left: -857px;
 }
 .achiv__item {
   position: absolute;
@@ -4673,10 +4702,10 @@ a.products__img:hover:after {
   content: '';
   left: 50%;
   top: 0;
-  margin-left: -800px;
+  margin-left: -960px;
   background: url(../../f/i/cloud.png) repeat;
   z-index: 2;
-  width: 1600px;
+  width: 1920px;
   height: 100%;
   z-index: -1;
 }
